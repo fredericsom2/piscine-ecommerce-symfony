@@ -1,0 +1,24 @@
+{% extends 'guest/base.html.twig' %}
+
+{% block metatitle %}
+	ElectroMénager | Liste des produits
+{% endblock metatitle %}
+
+{% block main %}
+	{% for product in products %} 
+
+		<article>
+
+			<h2>{{ product.title }}</h2>
+			<p>{{ product.description }}</p>
+			
+			
+			<a href="{{ path('details-product', {'id' : product.id}) }}">Voir le produit</a>
+
+		</article>
+
+	{% endfor %}
+{% endblock main %}
+	
+
+

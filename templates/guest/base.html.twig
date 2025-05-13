@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>	{% block metatitle %}{% endblock %}</title>
+</head>
+<link rel="stylesheet" href="{{ asset('asset/css/style.css') }}" type="text/css" />
+<body>
+
+<header>
+
+
+
+	<nav>
+
+		<ul>
+			<li><a href="{{path('home')}}">Accueil</a></li>
+			<li><a href="{{path('list-categories')}}">Catégories</a></li>
+			<li><a href="{{path('list-products')}}">Produits</a></li>
+
+		</ul>
+
+	</nav>
+
+</header>
+	
+
+<main>
+
+	{% block main %}
+	{% endblock %}
+
+</main>
+
+</body>
+</html>
